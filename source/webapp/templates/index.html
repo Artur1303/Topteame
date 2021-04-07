@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablo</title>
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="container">
+      <h1>Список спортсменов</h1>
+  {% for at in athlet %}
+      <div>
+      <p>Ф.И.О: {{ at.patronymic }}. {{ at.name }}. {{ at.lastname }}</p>
+      <p>Дата рождения: {{ at.date_of_birth }}</p>
+      <p>Город: {{ at.city }}</p>
+      <p>Вес: {{ at.weight }}</p>
+      <p>Клуб: {{ at.club }}</p>
+      ________________________________________
+      </div>
+    {% endfor %}
+
+
+
+</div>
+</body>
+</html>

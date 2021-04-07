@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tablo</title>
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="color">
+
+<p class="red">
+Points:{{ at.fighter2.score_1 }} / Adv:{{ at.fighter2.Adv }}
+
+    <br>
+{{ at.fighter2 }}
+
+
+</div>
+<div class='colors2'>
+    <p class="blue">
+
+Points:{{ at.fighter.score_1 }} / Adv:{{ at.fighter.Adv }}
+        <br>
+        {{ at.fighter }}
+    </p>
+
+</div>
+
+
+
+</body>
+</html>
